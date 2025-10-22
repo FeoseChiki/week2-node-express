@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config(); //
 
 const express = require("express");
 const app = express();
@@ -8,7 +8,7 @@ const PORT = process.env.PORT;app.use(express.json());
 app.use(express.json());
 
 app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url} - ${new Date()}`);
+  console.log(`${req.method} ${req.url} - ${req.body}`);
   next();
 });
 
@@ -31,4 +31,9 @@ app.get('/user/:id', (req, res) => {
   const id = req.params.id
   console.log(`User ${id} profile`);
   res.send(`User ${id} profile`);
+});
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({error: "Something went wrong!"});
 });

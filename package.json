@@ -1,0 +1,29 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node expressapp.js",
+    "dev": "nodemon expressapp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FeoseChiki/hello-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FeoseChiki/hello-js/issues"
+  },
+  "homepage": "https://github.com/FeoseChiki/hello-js#readme",
+  "keywords": [],
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
